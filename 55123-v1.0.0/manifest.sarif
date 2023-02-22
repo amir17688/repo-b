@@ -1,0 +1,125 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 55123,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "deprecated",
+        "submissionDate": "2011-04-08",
+        "language": "java",
+        "description": "CWE: 476 Null Pointer Dereference\n BadSource:  Set data to null\n GoodSource: Set data to a non-null value\n Sinks:\n GoodSink: add check to prevent possibility of null dereference\n BadSink : possibility of null dereference\n Flow Variant: 51 Data flow: data passed as an argument from one function to another in different classes in the same package",
+        "state": "mixed"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE476_NULL_Pointer_Dereference/CWE476_NULL_Pointer_Dereference__int_array_51a.java"
+          },
+          "length": 2209,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "3179cba6d673fb39f3385b8e58b831645af2ea9f685dba8d018968a3a8dfbdf9"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE476_NULL_Pointer_Dereference/CWE476_NULL_Pointer_Dereference__int_array_51b.java"
+          },
+          "length": 1569,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "b8a5f60ef7179e23e47e09b0852f3027c33230581c23af311d55a948d9976a97"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/AbstractTestCase.java"
+          },
+          "length": 1903,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "8f6a1cb2ef57786dd2d3310dc1d16c4176b44756bd9be62033da8070fa977689"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/IO.java"
+          },
+          "length": 2654,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "ff5fbe9cf7612c0b7ee83cceacba60324626151be57dfe948f18c407834cd55d"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "476",
+              "name": "NULL Pointer Dereference"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-476",
+          "message": {
+            "text": "NULL Pointer Dereference."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/testcases/CWE476_NULL_Pointer_Dereference/CWE476_NULL_Pointer_Dereference__int_array_51b.java",
+                  "index": 1
+                },
+                "region": {
+                  "startLine": 29
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "476",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

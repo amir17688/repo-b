@@ -1,0 +1,145 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 56938,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "deprecated",
+        "submissionDate": "2011-04-08",
+        "language": "java",
+        "description": "CWE: 617 Assertion is reachable\n BadSource: console_readLine Read data from the console using readLine\n GoodSource: A hardcoded string\n Sinks:\n BadSink : possibility of assertion being triggered\n Flow Variant: 53 Data flow: data passed as an argument from one method through two others to a fourth; all four functions are in different classes in the same package",
+        "state": "mixed"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE617_Reachable_Assertion/CWE617_Reachable_Assertion__console_readLine_53a.java"
+          },
+          "length": 3349,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "248997fd6f61e833f081a6444d2e3e9dc467aba879dbbfff005b8484f31ea1f6"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE617_Reachable_Assertion/CWE617_Reachable_Assertion__console_readLine_53b.java"
+          },
+          "length": 1180,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "1978603662fe545a98b9c28b766aef236e4f340484966844cccc84d8682ebafa"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE617_Reachable_Assertion/CWE617_Reachable_Assertion__console_readLine_53c.java"
+          },
+          "length": 1180,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "56cc059a49b220741aaa7e65619bb11dff1525e4adb0b4d106b382c40d553358"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE617_Reachable_Assertion/CWE617_Reachable_Assertion__console_readLine_53d.java"
+          },
+          "length": 1196,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "769af2cf792c9f2853d8a894d278967b10426519ac2aa900194ff0dfbba5d227"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/AbstractTestCase.java"
+          },
+          "length": 1903,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "8f6a1cb2ef57786dd2d3310dc1d16c4176b44756bd9be62033da8070fa977689"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/IO.java"
+          },
+          "length": 2654,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "ff5fbe9cf7612c0b7ee83cceacba60324626151be57dfe948f18c407834cd55d"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "617",
+              "name": "Reachable Assertion"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-617",
+          "message": {
+            "text": "Reachable Assertion."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/testcases/CWE617_Reachable_Assertion/CWE617_Reachable_Assertion__console_readLine_53d.java",
+                  "index": 3
+                },
+                "region": {
+                  "startLine": 30
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "617",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 59531,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "deprecated",
+        "submissionDate": "2011-04-08",
+        "language": "java",
+        "description": "CWE: 81 Cross Site Scripting (XSS) in Error Message\n BadSource: getCookiesServlet Read data from the first cookie\n GoodSource: A hardcoded string\n BadSink: sendErrorServlet XSS in sendError\n Flow Variant: 07 Control flow: if(private_five==5) and if(private_five!=5)",
+        "state": "mixed"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE81_XSS_Error_Message/CWE81_XSS_Error_Message__Servlet_getCookiesServlet_07.java"
+          },
+          "length": 5806,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "20ce115413707461ab95f62f613b07f229d7947d19a5f67351a6813aaf50dc7e"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/AbstractTestCaseServlet.java"
+          },
+          "length": 4483,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "1cf6e4164a9adead826bd42c06d0f6ded364a752d965a310f417fe4b1241680f"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/IO.java"
+          },
+          "length": 2654,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "ff5fbe9cf7612c0b7ee83cceacba60324626151be57dfe948f18c407834cd55d"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "81",
+              "name": "Improper Neutralization of Script in an Error Message Web Page"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-81",
+          "message": {
+            "text": "Improper Neutralization of Script in an Error Message Web Page."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/testcases/CWE81_XSS_Error_Message/CWE81_XSS_Error_Message__Servlet_getCookiesServlet_07.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 65
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "81",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

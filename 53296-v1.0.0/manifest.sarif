@@ -1,0 +1,155 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 53296,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "deprecated",
+        "submissionDate": "2011-04-08",
+        "language": "java",
+        "description": "CWE: 369 Divide by zero\n BadSource: Environment Read data from an environment variable\n GoodSource: A hardcoded non-zero, non-min, non-max, even number\n Sinks: divide\n GoodSink: Check for zero before dividing\n BadSink : Dividing by a value that may be zero\n Flow Variant: 54 Data flow: data passed as an argument from one method through three others to a fifth; all five functions are in different classes in the same package",
+        "state": "mixed"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__Environment_divide_54a.java"
+          },
+          "length": 3231,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "d06a91e92eec1e6c7da6263784d32df1391abdaa8bd7b1309e69a670c7821853"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__Environment_divide_54b.java"
+          },
+          "length": 1484,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "fd0b9535041b7b154301e55a986a4a6d811762dbd2052e28bf30cbefc5c3a40f"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__Environment_divide_54c.java"
+          },
+          "length": 1484,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "0319bfcca48c80b283f1ec2e5c18d4b5cafd26fc02bf30e83c3d0e8555bad371"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__Environment_divide_54d.java"
+          },
+          "length": 1484,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "cf9597185333d1d46b367cf0adb51a932fd6bd06d90cdcb23555306b4047902c"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__Environment_divide_54e.java"
+          },
+          "length": 1969,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "0123e5120742225de4198b8470b58f8981fb419dc2c2a5253df4807bb4d4c2b7"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/AbstractTestCase.java"
+          },
+          "length": 1903,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "8f6a1cb2ef57786dd2d3310dc1d16c4176b44756bd9be62033da8070fa977689"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/IO.java"
+          },
+          "length": 2654,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "ff5fbe9cf7612c0b7ee83cceacba60324626151be57dfe948f18c407834cd55d"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "369",
+              "name": "Divide By Zero"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-369",
+          "message": {
+            "text": "Divide By Zero."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__Environment_divide_54e.java",
+                  "index": 4
+                },
+                "region": {
+                  "startLine": 34
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "369",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

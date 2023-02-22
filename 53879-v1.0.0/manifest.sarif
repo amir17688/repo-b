@@ -1,0 +1,126 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "properties": {
+        "id": 53879,
+        "version": "1.0.0",
+        "type": "source code",
+        "status": "deprecated",
+        "submissionDate": "2011-04-08",
+        "language": "java",
+        "description": "CWE: 369 Divide by zero\n BadSource: getQueryStringServlet Parse id param out of the querystring without getParam\n GoodSource: A hardcoded non-zero, non-min, non-max, even number\n Sinks: modulo\n GoodSink: Check for zero before modulo\n BadSink : Modulo by a value that may be zero\n Flow Variant: 42 Data flow: data returned from one method to another in the same class",
+        "state": "mixed"
+      },
+      "tool": {
+        "driver": {
+          "name": "SARD - SAMATE",
+          "fullName": "Software Assurance Reference Dataset Project",
+          "informationUri": "https://samate.nist.gov/SARD/",
+          "version": "5.0.0",
+          "organization": "NIST",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "index": 0
+            }
+          ]
+        }
+      },
+      "artifacts": [
+        {
+          "location": {
+            "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__getQueryStringServlet_modulo_42.java"
+          },
+          "length": 9169,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "7fa0f0c5552302589428cb580368fe1036306f7e0265e2a5fa7f769e790d493e"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/AbstractTestCaseServlet.java"
+          },
+          "length": 4483,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "1cf6e4164a9adead826bd42c06d0f6ded364a752d965a310f417fe4b1241680f"
+          }
+        },
+        {
+          "location": {
+            "uri": "src/main/java/testcasesupport/IO.java"
+          },
+          "length": 2654,
+          "sourceLanguage": "java",
+          "hashes": {
+            "sha-256": "ff5fbe9cf7612c0b7ee83cceacba60324626151be57dfe948f18c407834cd55d"
+          }
+        }
+      ],
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "4.6",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v4.6.pdf",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v4.6.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "isComprehensive": false,
+          "taxa": [
+            {
+              "id": "369",
+              "name": "Divide By Zero"
+            }
+          ]
+        }
+      ],
+      "results": [
+        {
+          "ruleId": "CWE-369",
+          "message": {
+            "text": "Divide By Zero."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__getQueryStringServlet_modulo_42.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 70
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/main/java/testcases/CWE369_Divide_By_Zero/CWE369_Divide_By_Zero__getQueryStringServlet_modulo_42.java",
+                  "index": 0
+                },
+                "region": {
+                  "startLine": 128
+                }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "toolComponent": {
+                "name": "CWE",
+                "index": 0
+              },
+              "id": "369",
+              "index": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
